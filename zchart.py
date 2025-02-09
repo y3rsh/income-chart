@@ -111,7 +111,7 @@ def gen_readme():
 
 ![Income Chart](income_chart.png)
 
-[View Interactive Version](https://y3rsh.github.io/income-chart/)
+[View Standalone Version](https://y3rsh.github.io/income-chart/)
 
 ## Disclaimer  
 > {disclaimer}
