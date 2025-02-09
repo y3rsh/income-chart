@@ -21,39 +21,38 @@ header = f"US Income Levels and Lifestyle Choices {year}"
 
 
 def gen_image():
-    # Apply fivethirtyeight style
     plt.style.use("fivethirtyeight")
 
     income_bands = [
-        (30, "Entry-Level\nService"),
+        (20, "Starting out"),
+        (30, "Much experience\nBest shift type\njob my area"),
         (60, "Skilled\nLabor"),
         (100, "Professional"),
     ]
 
     job_labels = [
-        "Experienced\nCustomer Service,\nWarehouse\nAssembly\nManufacturing",
+        "Entry-Level\nService\nRetail\nFast Food",
+        "Experienced but\nNo specialized skills",
         "Technician,\nSkilled Trades\nUseful College Degree",
-        "Senior Engineer, Small Business Owner",
+        "Senior Engineer, Small Business Owner, Nurse Practitioner",
     ]
 
     lifestyle_labels = [
-        "Basic needs are met.\nLimited savings.\nLimited play\nOwning a reliable car is hard\nMust have roommates\nAlways hard trade offs 😓",
-        "More stability with less trade offs\nTravel and save occasionally\nEmergencies are rough,\nbut more manageable.",
+        "Broke as fuck",
+        "Basic needs are met\nLimited savings\nLimited play\nOwning a reliable car is hard\nMust have roommates\nAlways hard trade offs",
+        "More stability with less trade offs\nTravel and save occasionally\nEmergencies are rough,\nbut more manageable",
         "Richer\nthan 99%\nof humans",
     ]
 
-    # Adjust colors to match fivethirtyeight aesthetic
-    colors = ["#E24A33", "#348ABD", "#988ED5"]  # Muted red, blue, and purple
+    colors = ["#E24A33", "#348ABD", "#988ED5", "#2C693E"]
 
     fig, ax = plt.subplots(figsize=(10, 6))
 
-    # Create bars for income bands
     y_positions = np.arange(len(income_bands))
     hourly_rates = [rate for rate, _ in income_bands]
 
     bars = ax.barh(y_positions, hourly_rates, color=colors, edgecolor="black")
 
-    # Add job labels inside bars (adjusted for better readability)
     for i, bar in enumerate(bars):
         ax.text(
             bar.get_width() * 0.5,
@@ -66,10 +65,9 @@ def gen_image():
             fontweight="bold",
         )
 
-    # Add lifestyle labels to the right of the bars
     for i, (rate, label) in enumerate(income_bands):
         ax.text(
-            rate + 5,  # Offset for better readability
+            rate + 5,
             y_positions[i],
             lifestyle_labels[i],
             va="center",
@@ -78,9 +76,8 @@ def gen_image():
             color="black",
         )
 
-    # Set labels and title
     ax.set_xlabel(
-        "Hourly Rate ($)\nIf Small Business Owner hourly rate divided by 2",
+        "Hourly Rate ($)\nIf Small Business Owner, hourly rate divided by 2",
         fontsize=14,
         fontweight="bold",
     )
@@ -91,14 +88,11 @@ def gen_image():
         fontweight="bold",
     )
 
-    # Set y-axis labels
     ax.set_yticks(y_positions)
     ax.set_yticklabels([label for _, label in income_bands])
 
-    # Set x-axis limits for better spacing
     ax.set_xlim(0, 120)
 
-    # Improve grid styling
     ax.grid(axis="x", linestyle="--", alpha=0.5, color="gray")
 
     return plt
