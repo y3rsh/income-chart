@@ -25,7 +25,7 @@ def gen_image():
 
     income_bands = [
         (20, "Starting out"),
-        (30, "Much experience\nBest shift type\njob my area"),
+        (30, "Much experience\nBest shift type\njob in my area"),
         (60, "Skilled\nLabor"),
         (100, "Professional"),
     ]
