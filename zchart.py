@@ -32,9 +32,9 @@ def gen_image():
 
     job_labels = [
         "Entry-Level\nService\nRetail\nFast Food",
-        "Experienced but\nNo specialized skills",
-        "Technician,\nSkilled Trades\nUseful College Degree",
-        "Senior Engineer, Small Business Owner, Nurse Practitioner",
+        "Experienced\nNo specialized skills",
+        "Actual training or degree\nApprenticeship\nSkilled Trade\n",
+        "Senior Engineer\nSmall Business Owner\nNurse Practitioner",
     ]
 
     lifestyle_labels = [
