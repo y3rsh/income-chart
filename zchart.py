@@ -88,7 +88,7 @@ header = "US Income Levels and Lifestyle Choices 2025"
 
 # Create README.md with embedded image
 with open("README.md", "w") as f:
-    f.write(f"""# {header}\n""" "![Income Chart](income_chart.png)\n" f"{disclaimer}")
+    f.write(f"""# {header}\n![Income Chart](income_chart.png)\n<https://y3rsh.github.io/income-chart/>\n{disclaimer}""")
 
 # Create an HTML page with embedded image
 html_content = f"""<!DOCTYPE html>
