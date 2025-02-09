@@ -19,6 +19,7 @@ location, family/family of origin, dependents, personal preferences, culture, re
 year = datetime.now().year
 header = f"US Income Levels and Lifestyle Choices {year}"
 
+
 def gen_image():
     # Apply fivethirtyeight style
     plt.style.use("fivethirtyeight")
@@ -102,15 +103,25 @@ def gen_image():
 
     return plt
 
+
 def gen_readme():
     with open("README.md", "w") as f:
         f.write(
-            f"""# {header}\n![Income Chart](income_chart.png)\n<https://y3rsh.github.io/income-chart/>\n{disclaimer}
-    ## Other tools
-    - [How Rich am I](https://www.givingwhatwecan.org/how-rich-am-i?income=100000&countryCode=USA&numAdults=1&numChildren=0)
-    """
+            f"""# {header}
+
+![Income Chart](income_chart.png)
+
+[View Interactive Version](https://y3rsh.github.io/income-chart/)
+
+## Disclaimer  
+> {disclaimer}
+
+## Other Tools  
+- **[How Rich Am I?](https://www.givingwhatwecan.org/how-rich-am-i?income=100000&countryCode=USA&numAdults=1&numChildren=0)**  
+"""
         )
     print("README file generated successfully.")
+
 
 def gen_html():
     html_content = f"""<!DOCTYPE html>
