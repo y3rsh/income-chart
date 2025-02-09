@@ -1,7 +1,6 @@
-# Income Levels and Lifestyle Choices
-
+# US Income Levels and Lifestyle Choices 2025
 ![Income Chart](income_chart.png)
-
-This chart represents different income levels, their associated job roles, and the lifestyle choices available at each income bracket.
-
-It is a broad generalization and does not account for the many variables that can affect lifestyle choices, such as location, family size, personal preferences, culture, religion, and economic conditions.
+Disclaimer:
+This chart is a broad generalization and does not account for the many variables that can affect lifestyle choices, such as;
+location, family/family of origin, dependents, personal preferences, culture, religion, and economic conditions.
+This is a "Dad" picture, to help folks visualize the impact of income on lifestyle choices.
