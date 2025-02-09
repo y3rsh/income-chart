@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-disclaimer = """Disclaimer:
+disclaimer = """
 This is a "Dad" picture, to help folks visualize the impact of income on lifestyle choices.
 This chart is a broad generalization and does not account for the many variables that can affect lifestyle choices, such as;
 location, family/family of origin, dependents, personal preferences, culture, religion, and economic conditions.
@@ -159,6 +159,7 @@ def gen_html():
         <div class=\"container\">
             <h1>{header}</h1>
             <img src=\"income_chart.png\" alt=\"Income Chart\">
+            <h2>Disclaimer</h2>
             <p>{disclaimer}</p>
         </div>
         <div class=\"container\">
